@@ -99,12 +99,12 @@ const [require,setRequire] = useState("")
 }
               
               <div className="flex flex-row justify-between">
-                  {(type === "Over Weight") && <button className="bg-blue-500 text-white p-3 mt-10 rounded">Get Weight Loss Plain</button>}
-                  {(type === "Over Weight") && <button className="bg-blue-500 text-white p-3 mt-10 rounded">Get Weight Loss Diet Plain</button>}
-                  {(type === "Obesity")  && <button className="bg-blue-500 text-white p-3 mt-10 rounded">Get Weight Loss Plain</button>}
-                  {(type === "Obesity")  && <button className="bg-blue-500 text-white p-3 mt-10 rounded">Get Weight Loss Diet Plain</button>}
-                  {(type === "Under weight") && <button className="bg-blue-500 text-white p-3 mt-10 rounded">Get Weight Gain Plain</button>}
-                  {(type === "Under weight")  && <button className="bg-blue-500 text-white p-3 mt-10 rounded">Get Weight Gain Diet Plain</button>}
+                  {(type === "Over Weight") && <button className="bg-blue-500 text-white p-3 mt-10 rounded">Get Weight Loss Plan</button>}
+                  {(type === "Over Weight") && <button className="bg-blue-500 text-white p-3 mt-10 rounded">Get Weight Loss Diet Plan</button>}
+                  {(type === "Obesity")  && <button className="bg-blue-500 text-white p-3 mt-10 rounded">Get Weight Loss Plan</button>}
+                  {(type === "Obesity")  && <button className="bg-blue-500 text-white p-3 mt-10 rounded">Get Weight Loss Diet Plan</button>}
+                  {(type === "Under weight") && <button className="bg-blue-500 text-white p-3 mt-10 rounded">Get Weight Gain Plan</button>}
+                  {(type === "Under weight")  && <button className="bg-blue-500 text-white p-3 mt-10 rounded">Get Weight Gain Diet Plan</button>}
               </div>
               </div>
               </div>
