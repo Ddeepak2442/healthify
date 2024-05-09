@@ -1,6 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import Cors from 'cors';
 import { OpenAI } from 'openai'; // Removed ChatCompletion import
+import {error} from "console"
+
 
 // Initializing the cors middleware
 // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
@@ -20,7 +22,7 @@ const openai = new OpenAI({
 
 function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: any) {
   return new Promise<void>((resolve, reject) => {
-    if (fn && fn.origin) {
+    if (fn.orgin && fn) {
       fn(req, res, (result: any) => {
         if (result instanceof Error) {
           return reject(result);
@@ -78,8 +80,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.log(completion);
     console.log("Sent: " + completion.choices[0].message.content);
     res.status(200).json({ code: completion.choices[0].message.content });
-  } catch (error: any) {
-    // Consider adjusting the error handling logic for your use case
+  } catch (error:any) {
     if (error.response) {
       console.error(error.response.status, error.response.data);
       res.status(error.response.status).json(error.response.data);
